@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Operation {
+  id            String         @id @default(auto()) @map("_id") @db.ObjectId
+  name          String
+  vehicleTypes  VehicleType[]  @relation("OperationVehicleTypes") 
+  createdAt     DateTime       @default(now())
+}
+model VehicleType {
+  id           String     @id @default(auto()) @map("_id") @db.ObjectId
+  type         String
+  count        Int
+  operationId  String      @db.ObjectId
+  operation    Operation   @relation("OperationVehicleTypes", fields: [operationId], references: [id])
+  
+  schedules    Schedule[]  @relation("VehicleTypeSchedules") // <-- relathion with Schedule
+}
+
+model Schedule {
+  id             String      @id @default(auto()) @map("_id") @db.ObjectId
+  source         String
+  destination    String
+  duration       Int
+  distance       Float
+  vehicleTypeId  String?      @db.ObjectId
+  vehicleType    VehicleType? @relation("VehicleTypeSchedules", fields: [vehicleTypeId], references: [id]) // <-- put the same name of relationship     
+}
+

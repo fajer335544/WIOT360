@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "720a81cc-df27-486f-b059-4adc20a0e996",
+		"name": "Wiot360",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22129966"
+	},
+	"item": [
+		{
+			"name": "Operations",
+			"item": [
+				{
+					"name": "Add new Trip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nameضصث\": \"jeje Transport\",\r\n  \"vehicleTypes\": [\r\n    {\r\n      \"type\": \"Car\",\r\n      \"count\": 3\r\n    },\r\n    {\r\n      \"type\": \"Bus\",\r\n      \"count\": 20\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/operations",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"operations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Trips",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/operations",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"operations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update the Trip",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"winter 2 Transport\"\r\n  \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/operations/680ceab964a7f3753eb76d66",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"operations",
+								"680ceab964a7f3753eb76d66"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete the operation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/operations/680ceadc64a7f3753eb76d69",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"operations",
+								"680ceadc64a7f3753eb76d69"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicl Types",
+			"item": [
+				{
+					"name": "get all vehicle-types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/vehicle-types",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicle-types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get vehicle-types By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/vehicle-types/680cdd4a8e5952e8da012c2d",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicle-types",
+								"680cdd4a8e5952e8da012c2d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update vehicle-types By ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"Airbus new version\",\r\n  \"count\": 12,\r\n  \"operationId\": \"680ceab964a7f3753eb76d66\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/vehicle-types/680cfd7f02c868ee7d4834f8",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicle-types",
+								"680cfd7f02c868ee7d4834f8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete vehicle-types By ID Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/vehicle-types/680cdd4a8e5952e8da012c2d",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicle-types",
+								"680cdd4a8e5952e8da012c2d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add vehicle-types",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"Airbus 2026\",\r\n  \"count\": 50,\r\n  \"operationId\": \"680ceab964a7f3753eb76d66\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/vehicle-types",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicle-types"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Schedule",
+			"item": [
+				{
+					"name": "get all schedule",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/schedule",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"schedule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get  schedule By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/schedule/680b6f379114dda2dcbc5ad1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"schedule",
+								"680b6f379114dda2dcbc5ad1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add schedule",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"source\": \"Syria\",\r\n  \"destination\": \"لبنان\",\r\n  \"duration\": 6000,\r\n  \"distance\": 160.5,\r\n  \"vehicleTypeId\": \"680cfc3df46a66581f1b296b\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/schedule",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"schedule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update schedule",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"source\": \"Lebanon Updated\",\r\n  \"destination\": \"Berlin\",\r\n  \"duration\": 6000,\r\n  \"distance\": 160.5,\r\n  \"vehicleTypeId\": \"680cdd4a8e5952e8da012c2e\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/schedule/680ce415153ecabd116bc14e",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"schedule",
+								"680ce415153ecabd116bc14e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete schedule",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"source\": \"Lebanon Updated\",\r\n  \"destination\": \"Berlin\",\r\n  \"duration\": 6000,\r\n  \"distance\": 160.5,\r\n  \"vehicleTypeId\": \"680cdd4a8e5952e8da012c2e\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/schedule/680d0269d4a8ed7b12feed28",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"schedule",
+								"680d0269d4a8ed7b12feed28"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "serverTest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000",
+					"host": [
+						"localhost"
+					],
+					"port": "5000"
+				}
+			},
+			"response": []
+		}
+	]
+}
