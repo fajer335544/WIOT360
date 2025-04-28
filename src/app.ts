@@ -3,7 +3,8 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import operationRoutes from './Routes/operation.routes';  
 import vehicleTypeRoutes from './Routes/vehicleType.routes';
-import scheduleRoutes from './Routes/schedule.routes' 
+import scheduleRoutes from './Routes/schedule.routes' ;
+require('dotenv').config();
 const app = express();
 
 // Middlewares
